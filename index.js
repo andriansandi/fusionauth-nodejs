@@ -15,6 +15,11 @@ app.get('/', function(req, res) {
 
 app.get('/oauth-redirect', function(req, res) {
     console.log('MAHO');
+    res.redirect('/profile');
+});
+
+app.get('/profile', function(req, res) {
+    res.render('profile.html');
 });
 
 app.listen(3000, function() {
